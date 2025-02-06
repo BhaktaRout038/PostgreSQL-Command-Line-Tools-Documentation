@@ -73,6 +73,9 @@ psql -h 192.168.142.21 -U postgres -d vidsanalytics
   ```
 
 - **Restore Specific Table:**
+  
+  ***How to restore a single table from a .sql postgresql backup?***
+  
    below recommended for single table restore with schema & data both
    ```bash
      pg_restore -h <host> -U <username> -d <database_name>  "E:\demobackup\userdetails.sql"
