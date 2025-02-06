@@ -75,7 +75,12 @@ psql -h 192.168.142.21 -U postgres -d vidsanalytics
 - **Restore Specific Table:**
    below recommended for single table restore with schema & data both
    ```bash
-     pg_restore -h <host> -U <username> -d <database_name> -f "E:\demobackup\userdetails.sql"
+     pg_restore -h <host> -U <username> -d <database_name>  "E:\demobackup\userdetails.sql"
+   ```
+   example
+  
+   ```bash
+    pg_restore -h 192.168.142.21 -U postgres -d vidsanalytics "E:\demobackup\userdetails.sql"
    ```
     
   alternative
