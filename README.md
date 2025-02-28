@@ -218,6 +218,15 @@ psql -h 192.168.142.21 -U postgres -d vidsanalytics -f "E:\demobackup\orders.sql
 
 - **Batch Restore Multiple `.sql` Files**: Use wildcards or a batch script to restore all `.sql` files in a folder.
 
+### Checking a Table’s Storage Size
+ ```
+SELECT pg_size_pretty(pg_total_relation_size('your_table_name')) AS table_size;
+```
+### Checking a Database’s Storage Size
+```
+SELECT pg_size_pretty(pg_database_size('your_database_name')) AS db_size;
+```
+
 These tools provide a powerful way to manage PostgreSQL databases directly from the command line. Let me know if you need further clarification or assistance!
 
 --- 
